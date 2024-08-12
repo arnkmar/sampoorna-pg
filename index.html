@@ -4,74 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sampoorna Men's and Women's PG</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
 
+    
+    <header>
+        <div class="container">
+            <img src="sampoorna_logo.png" alt="Logo of My PG Business" class="center">
+        </div>      
+    </header>    
+
+    <nav class="navigation-tabs">
+        <ul>
+          <li><a class="tablinks" onclick="openCity(event, 'home')">Home</a></li>
+          <li><a class="tablinks" onclick="openCity(event, 'foodSchedule')">Food Schedule</a></li>
+          <li><a class="tablinks" onclick="openCity(event, 'maintenance')">Maintenance</a></li>
+          <li><a class="tablinks" onclick="openCity(event, 'house-rules')">House Rules</a></li>
+        </ul>
+    </nav>
+
+
+    <p></p>
+    <div id="home" class="tabcontent container">
+        
+        <div class="center">
+            <a class="center large-button" href="https://docs.google.com/forms/d/e/1FAIpQLSe58bwLBgP5NWPOSuH6hQ1r28imNnLCOpep1OXeBtFgWXpmsA/viewform" target="_blank"> Register </a>
+        </div>  
+        <p></p>
+        <div class="center">
+            <a class="center large-button" href="https://docs.google.com/forms/d/e/1FAIpQLSfZj1B2pnLye-p00bZ2mRHY3u8F9dCeoo4WsU72oRJ9_fNrDA/viewform" target="_blank"> Report an issue </a>
+        </div>
+        <p></p>
+        <div class="center">
+            <a class="center large-button" href="https://docs.google.com/forms/d/e/1FAIpQLSfx1qaV0CSoHHejS5AQbS352niQoVj-JrWhwGkWMwmG308f1Q/viewform" target="_blank"> Share a feedback </a>
+        </div>
+        
+    </div>
+
+
+    <section id="foodSchedule" class="tabcontent">
+        <h2>Food Schedule</h2>
+        <table>
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Breakfast</th>
+                <th>Lunch</th>
+                <th>Dinner</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Choose at Hotel Sampoorna</td>
+                    <td>Rice item - Curd rice, Anna sambar</td>
+                    <td>Boys - Choose at Hotel Sampoorna
+Girls - Food is sent to PG House</td>
+                  </tr>
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>Choose at Hotel Sampoorna</td>
+                    <td>Rice item - Curd rice, Anna sambar</td>
+                    <td>Boys - Choose at Hotel Sampoorna
+Girls - Food is sent to PG House</td>
+                  </tr>
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>Choose at Hotel Sampoorna</td>
+                    <td>Rice item - Curd rice, Anna sambar</td>
+                    <td>Boys - Choose at Hotel Sampoorna
+Girls - Food is sent to PG House</td>
+                  </tr>
+                  <tr>
+                    <td>Thursday</td>
+                    <td>Choose at Hotel Sampoorna</td>
+                    <td>Rice item - Curd rice, Anna sambar</td>
+                    <td>Boys - Choose at Hotel Sampoorna
+Girls - Food is sent to PG House</td>
+                  </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Choose at Hotel Sampoorna</td>
+                    <td>Rice item - Curd rice, Anna sambar</td>
+                    <td>Boys - Choose at Hotel Sampoorna
+Girls - Food is sent to PG House</td>
+                  </tr>
+                <tr>
+                <td>Saturday</td>
+                <td>Choose at Hotel Sampoorna</td>
+                <td>Rice item - Curd rice, Anna sambar</td>
+                <td>Boys - Choose at Hotel Sampoorna
+Girls - Food is sent to PG House</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>Choose at Hotel Sampoorna</td>
+                <td>You need choose Veg/Non-Veg via whatsapp group poll.</td>
+                <td> (NOT SERVED) </td>
+              </tr>
+            </tbody>
+          </table>
+          
+          
+          
+    </section>
+    
+    <section id="maintenance" class="tabcontent">
+        <h2>Maintenance</h2>
+
+            <h3>General</h3>
+            <li>The house will be cleaned by a servant periodically.</li>
+            <li>Kicthen, Toilet, Common area will be cleaned</li>
+            <li>You are responsible to clean the dubbish created by you.</li>
+            <li>Use deciated dust bin for rubbish.</li>
+        
+    </section>
+
+
+    <section id="house-rules" class="tabcontent">
+        <h2>House Rules</h2>
+
+            <h3>General</h3>
+            <li>Talking on phone in a manner that disturbs the co-habitant is not permitted in the house.</li>
+            <li>In case of conflict or concern with co-habitant, please contact the facility manager. Do not take the matter to your own hands.</li>
+            <li>Keep the surroundings clean. Follow the policy of leave it as you found it.</li>
+        
+            <h3>Evening and Night</h3>    
+            <li>Turn off the lights by 10:30 PM</li>
+            <li>Arrive at the PG home before 10:00 PM</li>
+            <li>In case of the need to talk or work after 10:30PM, please use common facility such as kitchen or hall as applicable.</li>
+
+    </section>
+      
+    
 </body>
 </html>
-
-<header>
-    <div class="container">
-        <img src="sampoorna_logo.png" alt="Logo of My PG Business" class="center">
-    </div>
-</header>
-
-<p></p>
-<div class="center">
-    <a  href="https://docs.google.com/forms/d/e/1FAIpQLSe58bwLBgP5NWPOSuH6hQ1r28imNnLCOpep1OXeBtFgWXpmsA/viewform" target="_blank"> Register </a>
-</div>
-
-
-<p></p>
-<div class="center">
-    <a  href="https://docs.google.com/forms/d/e/1FAIpQLSfZj1B2pnLye-p00bZ2mRHY3u8F9dCeoo4WsU72oRJ9_fNrDA/viewform" target="_blank"> Report an issue </a>
-</div>
-<p></p>
-<div class="center">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfx1qaV0CSoHHejS5AQbS352niQoVj-JrWhwGkWMwmG308f1Q/viewform" target="_blank"> Share a feedback </a>
-</div>
-
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-    }
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-    h1 {
-        color: #333;
-    }
-    a {
-        display: inline-block;
-        background-color: #007bff;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-    .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-.container {
-            max-width: 1200px;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background-color: #6ce5ee;
-            color: white;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #0779e4 3px solid;
-        }
-        nav li {
-            display: inline;
-            margin-right: 10px;
-        }
-</style>
