@@ -35,17 +35,6 @@ a {
     
 }
 
-ab {
-    display: inline-block;
-    background-color: #0e9d3e;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 50px;
-    text-align:  center;
-}
-
-
 .center {
     display: block;
     margin-left: auto;
