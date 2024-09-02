@@ -32,6 +32,17 @@ a {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 50px;
+    
+}
+
+ab {
+    display: inline-block;
+    background-color: #0e9d3e;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    text-align:  center;
 }
 
 
@@ -73,6 +84,14 @@ td {
     padding: 10px;
     overflow:auto;
 }
+
+.navigation-tabs2 {
+    background-color: #0e9d3e;
+    padding: 10px;
+    overflow:auto;
+}
+
+
 
 .navigation-tabs ul {
     list-style-type: none;
