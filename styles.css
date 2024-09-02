@@ -1,6 +1,6 @@
 html {
     font-family: Arial, sans-serif;
-    background-color: #5a8bae
+    /* background-color: #5a8bae */
 }
 
 .large-button {
@@ -8,7 +8,7 @@ html {
     height: 35px;
     text-align: center;
     text-wrap-mode: auto;
-    background-color: #003d69;
+    background-color: #06497a;
     /* Optional: Adds a background color */
 }
 
@@ -49,7 +49,7 @@ a {
 }
 
 header {
-    background-color: #5a8bae;
+    /* background-color: #5a8bae; */
     color: white;
     margin: 0;
     justify-content: center;
