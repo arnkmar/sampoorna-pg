@@ -35,11 +35,16 @@ a {
     
 }
 
+.admin {
+    background-color: #7ccd7e;    
+}
+
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    text-align: center;
 }
 
 .container {
