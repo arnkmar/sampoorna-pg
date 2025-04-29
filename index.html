@@ -5,155 +5,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sampoorna Men's and Women's PG</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="main.js"></script>
-  </head>
-  <body>
-    
-    <header>
-        <div class="container">
-            <img class="center" src="sampoorna_logo.png" alt="Logo of My PG Business">
-        </div>      
-    </header>    
-    
 
-    <nav class="navigation-tabs">
-        <ul>
-          <li><a class="tablinks" onclick="openTab(event, 'home')">Home</a></li>
-          <li><a class="tablinks" onclick="openTab(event, 'foodSchedule')">Food Schedule</a></li>
-          <li><a class="tablinks" onclick="openTab(event, 'maintenance')">Maintenance</a></li>
-          <li><a class="tablinks" onclick="openTab(event, 'house-rules')">House Rules</a></li>
-        </ul>
-    </nav>
-
-
-    <p></p>
-    <div id="home" class="tabcontent container">
-        
-        <div class="center">
-            <a class="center large-button" href="https://docs.google.com/forms/d/e/1FAIpQLSe58bwLBgP5NWPOSuH6hQ1r28imNnLCOpep1OXeBtFgWXpmsA/viewform" target="_blank"> Register </a>
-        </div>  
-        <p></p>
-        <!-- <div class="center">
-            <a class="center large-button" href="https://docs.google.com/forms/d/e/1FAIpQLSfZj1B2pnLye-p00bZ2mRHY3u8F9dCeoo4WsU72oRJ9_fNrDA/viewform" target="_blank"> Request maintenace </a>
-        </div> -->
-        <p></p>
-        <div class="center">
-            <a class="center large-button" href="https://docs.google.com/forms/d/e/1FAIpQLSfx1qaV0CSoHHejS5AQbS352niQoVj-JrWhwGkWMwmG308f1Q/viewform" target="_blank"> Share a feedback </a>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="nav-bar">
+            <div class="logo">Sampoorna PG</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#foodSchedule">Food Schedule</a></li>
+                    <li><a href="#maintenance">Maintenance</a></li>
+                    <li><a href="#house-rules">House Rules</a></li>
+                    <li><a href="#register">Register</a></li>
+                </ul>
+            </nav>
         </div>
-        
-    </div>
+    </header>
 
+    <!-- Hero Section
+    <section class="hero">
+        <h1>Experience Comfort Living</h1>
+        <p>Your home away from home with premium facilities</p>
+    </section> -->
 
-    <section id="foodSchedule" class="tabcontent">
-        <h2>Food Schedule</h2>
-        <table>
-            <thead>
+    <!-- Facilities Section -->
+    <section id="facilities" class="facilities">
+        <!-- Security Guard Facility -->
+        <div class="facility-card">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z'/%3E%3C/svg%3E" alt="Security Guard" class="facility-icon">
+            <h3>24/7 Security Guard</h3>
+            <p>Professional security personnel ensuring your safety round the clock</p>
+        </div>
+
+        <!-- Cabinet Storage Facility -->
+        <div class="facility-card">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z'/%3E%3C/svg%3E" alt="Cabinet Storage" class="facility-icon">
+            <h3>Spacious Storage Cabinets</h3>
+            <p>Large wooden cabinets for storing clothes and personal items</p>
+        </div>
+
+        <!-- Food Service Facility -->
+        <div class="facility-card">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z'/%3E%3C/svg%3E" alt="Food Service" class="facility-icon">
+            <h3>Healthy Meals</h3>
+            <p>Nutritious meals included in package, prepared fresh daily</p>
+        </div>
+
+        <!-- Washing Machine Facility -->
+        <div class="facility-card">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z'/%3E%3C/svg%3E" alt="Washing Machine" class="facility-icon">
+            <h3>Laundry Facilities</h3>
+            <p>Modern washing machines available for resident use</p>
+        </div>
+
+        <!-- Fridge Facility -->
+        <div class="facility-card">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z'/%3E%3C/svg%3E" alt="Refrigerator" class="facility-icon">
+            <h3>Shared Refrigerators</h3>
+            <p>Large capacity fridges for storing food items</p>
+        </div>
+
+        <!-- WiFi Facility -->
+        <div class="facility-card">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z'/%3E%3C/svg%3E" alt="WiFi" class="facility-icon">
+            <h3>High-Speed WiFi</h3>
+            <p>Reliable internet connectivity throughout the premises</p>
+        </div>
+
+        <!-- Security Camera Facility -->
+        <div class="facility-card">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z'/%3E%3C/svg%3E" alt="Security Cameras" class="facility-icon">
+            <h3>CCTV Surveillance</h3>
+            <p>Strategically placed security cameras for enhanced safety</p>
+        </div>
+
+        <div class="facility-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z'/%3E%3C/svg%3E" alt="Security Cameras" class="facility-icon">
+          <h3>Affordable</h3>
+          <p>We offer best service in your budget</p>
+      </div>
+    </section>
+
+    <section id="foodSchedule" class="hero">
+      <h2>Food Schedule</h2>
+      <table>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Breakfast</th>
+              <th>Lunch</th>
+              <th>Dinner</th>
+            </tr>
+          </thead>
+          <tbody>
               <tr>
-                <th>Day</th>
-                <th>Breakfast</th>
-                <th>Lunch</th>
-                <th>Dinner</th>
-              </tr>
-            </thead>
-            <tbody>
+                  <td>Monday</td>
+                  <td>Choose at Hotel Sampoorna</td>
+                  <td>Rice item - Curd rice, Anna sambar</td>
+                  <td>Boys - Choose at Hotel Sampoorna
+Girls - Food is sent to PG House</td>
+                </tr>
                 <tr>
-                    <td>Monday</td>
-                    <td>Choose at Hotel Sampoorna</td>
-                    <td>Rice item - Curd rice, Anna sambar</td>
-                    <td>Boys - Choose at Hotel Sampoorna
+                  <td>Tuesday</td>
+                  <td>Choose at Hotel Sampoorna</td>
+                  <td>Rice item - Curd rice, Anna sambar</td>
+                  <td>Boys - Choose at Hotel Sampoorna
 Girls - Food is sent to PG House</td>
-                  </tr>
-                  <tr>
-                    <td>Tuesday</td>
-                    <td>Choose at Hotel Sampoorna</td>
-                    <td>Rice item - Curd rice, Anna sambar</td>
-                    <td>Boys - Choose at Hotel Sampoorna
-Girls - Food is sent to PG House</td>
-                  </tr>
-                  <tr>
-                    <td>Wednesday</td>
-                    <td>Choose at Hotel Sampoorna</td>
-                    <td>Rice item - Curd rice, Anna sambar</td>
-                    <td>Boys - Choose at Hotel Sampoorna
+                </tr>
+                <tr>
+                  <td>Wednesday</td>
+                  <td>Choose at Hotel Sampoorna</td>
+                  <td>Rice item - Curd rice, Anna sambar</td>
+                  <td>Boys - Choose at Hotel Sampoorna
 Girls - Food is sent to PG House.
 
 Special: Egg items</td>
-                  </tr>
-                  <tr>
-                    <td>Thursday</td>
-                    <td>Choose at Hotel Sampoorna</td>
-                    <td>Rice item - Curd rice, Anna sambar</td>
-                    <td>Boys - Choose at Hotel Sampoorna
-Girls - Food is sent to PG House</td>
-                  </tr>
+                </tr>
                 <tr>
-                    <td>Friday</td>
-                    <td>Choose at Hotel Sampoorna</td>
-                    <td>Rice item - Curd rice, Anna sambar</td>
-                    <td>Boys - Choose at Hotel Sampoorna
+                  <td>Thursday</td>
+                  <td>Choose at Hotel Sampoorna</td>
+                  <td>Rice item - Curd rice, Anna sambar</td>
+                  <td>Boys - Choose at Hotel Sampoorna
 Girls - Food is sent to PG House</td>
-                  </tr>
-                <tr>
-                <td>Saturday</td>
-                <td>Choose at Hotel Sampoorna</td>
-                <td>Rice item - Curd rice, Anna sambar</td>
-                <td>Boys - Choose at Hotel Sampoorna
-Girls - Food is sent to PG House</td>
-              </tr>
+                </tr>
               <tr>
-                <td>Sunday</td>
-                <td>Choose at Hotel Sampoorna</td>
-                <td>You need choose Veg/Non-Veg via whatsapp group poll.</td>
-                <td> (NOT SERVED) </td>
-              </tr>
-            </tbody>
-          </table>
-          
-          
-          
-    </section>
-    
-    <section id="maintenance" class="tabcontent">
-        <h2>Maintenance</h2>
-
-            <h3>General</h3>
-            <li>The house will be cleaned by a servant periodically.</li>
-            <li>Kitchen, Toilet, Common area will be cleaned</li>
-            <li>You are responsible to clean the rubbish created by you.</li>
-            <li>Use deciated dust bin for rubbish.</li>
-            <li>Fridge will not be cleaned. You need to clean it and keep it free old/spoilt items.</li>
-    </section>
-
-
-    <section id="house-rules" class="tabcontent">
-        <h2>House Rules</h2>
-
-            <h3>General</h3>
-            <li>Talking on phone in a manner that disturbs the co-habitant is not permitted in the house. You can go to terrace to talk.</li>
-            <li>In case of conflict or concern with co-habitant, please contact the PG owner. Do not take the matter to your own hands.</li>
-            <li>Keep the surroundings clean. Follow the policy of leave it as you found it.</li>
-            <li>Lights needs to turned off while leaving the PG. Save energy.</li>
-            <li>For any number of days you will stay beyond the contract end date, you will be charged a sum of Ruppes 600 per day.</li>
+                  <td>Friday</td>
+                  <td>Choose at Hotel Sampoorna</td>
+                  <td>Rice item - Curd rice, Anna sambar</td>
+                  <td>Boys - Choose at Hotel Sampoorna
+Girls - Food is sent to PG House</td>
+                </tr>
+              <tr>
+              <td>Saturday</td>
+              <td>Choose at Hotel Sampoorna</td>
+              <td>Rice item - Curd rice, Anna sambar</td>
+              <td>Boys - Choose at Hotel Sampoorna
+Girls - Food is sent to PG House</td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>Choose at Hotel Sampoorna</td>
+              <td>You need choose Veg/Non-Veg via whatsapp group poll.</td>
+              <td> (NOT SERVED) </td>
+            </tr>
+          </tbody>
+        </table>
         
-            <h3>Evening and Night</h3>    
-            <li>Turn off the lights by 10:30 PM</li>
-            <li>Only for CMG: If you must to study or work after 10:30PM then you can use the facility in 4th floor</li>
-            <li>Only other PGs: If you must to study or work after 10:30PM then you can use the corridor or terrace</li>
-            <li>Arrive at the PG home before 10:00 PM. In rare cases, if there is a delay you must give prior notice to PG owner.</li>
-            <li>Absence in returning to PG for a night must be informed prior.</li>
-            <li>In case of the need to talk or work after 10:30PM, please use common facility such as kitchen or hall as applicable.</li>
-            
-            <h3>Departure</h3>
-            <li>Locker keys, pillows and bed needs to returned in same manner as received </li>
-            
-            <h3>Not Permitted</h3>
-            <li>Friends are not allowed.</li>
-            <li>No delivery service man can enter the PG gate. This includes swiggy/zomato or any other delivery/parcel service.</li>
-            <li>Parents are not allowed to stay with you.</li>
-            <li>Parents cannot enter the PG without PG-owner permission</li>
-         </section>
+        
+        
+  </section>
+  
+  <section id="maintenance" class="hero2">
+      <h2>Maintenance</h2>
+
+          <h3>General</h3>
+          <li>The house will be cleaned by a servant periodically.</li>
+          <li>Kitchen, Toilet, Common area will be cleaned</li>
+          <li>You are responsible to clean the rubbish created by you.</li>
+          <li>Use deciated dust bin for rubbish.</li>
+          <li>Fridge will not be cleaned. You need to clean it and keep it free old/spoilt items.</li>
+  </section>
+
+    <section id="house-rules" class="hero">
+      <h2>House Rules</h2>
+
+          <h3>General</h3>
+          <li>Talking on phone in a manner that disturbs the co-habitant is not permitted in the house. You can go to terrace to talk.</li>
+          <li>In case of conflict or concern with co-habitant, please contact the PG owner. Do not take the matter to your own hands.</li>
+          <li>Keep the surroundings clean. Follow the policy of leave it as you found it.</li>
+          <li>Lights needs to turned off while leaving the PG. Save energy.</li>
+          <li>For any number of days you will stay beyond the contract end date, you will be charged a sum of Ruppes 600 per day.</li>
       
+          <h3>Evening and Night</h3>    
+          <li>Turn off the lights by 10:30 PM</li>
+          <li>Only for CMG: If you must to study or work after 10:30PM then you can use the facility in 4th floor</li>
+          <li>Only other PGs: If you must to study or work after 10:30PM then you can use the corridor or terrace</li>
+          <li>Arrive at the PG home before 10:00 PM. In rare cases, if there is a delay you must give prior notice to PG owner.</li>
+          <li>Absence in returning to PG for a night must be informed prior.</li>
+          <li>In case of the need to talk or work after 10:30PM, please use common facility such as kitchen or hall as applicable.</li>
+          
+          <h3>Departure</h3>
+          <li>Locker keys, pillows and bed needs to returned in same manner as received </li>
+          
+          <h3>Not Permitted</h3>
+          <li>Friends are not allowed.</li>
+          <li>No delivery service man can enter the PG gate. This includes swiggy/zomato or any other delivery/parcel service.</li>
+          <li>Parents are not allowed to stay with you.</li>
+          <li>Parents cannot enter the PG without PG-owner permission</li>
+       </section>
+
+    <!-- Contact Section -->
+    <section id="register">
+        <div class="contact-form">
+          <H1>Registration</H1>
+          You can register yourself with this  
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe58bwLBgP5NWPOSuH6hQ1r28imNnLCOpep1OXeBtFgWXpmsA/viewform" target="_blank"> link </a>
+        
+            
+        </div>
+    </section>
     
+    <!-- Contact Section -->
+    <!-- <section id="contact">
+        <div class="contact-form">
+            <h2>Book Your Stay</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duration of Stay:</label>
+                    <select id="duration" name="duration" required>
+                        <option value="">Select Duration</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="quarterly">Quarterly</option>
+                        <option value="yearly">Yearly</option>
+                    </select>
+                </div>
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </div>
+    </section> -->
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Sampoorna PG - All Rights Reserved</p>
+    </footer>
 </body>
 </html>
