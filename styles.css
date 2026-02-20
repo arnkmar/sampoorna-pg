@@ -1,21 +1,33 @@
-<style>
+:root {
+    --primary: #2196F3;
+    --secondary: #00bcd4;
+    --dark: #2c3e50;
+    --light: #f8f9fa;
+    --glass: rgba(255, 255, 255, 0.9);
+    --shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    color: var(--dark);
+    background-color: #f4f7f6;
 }
 
+/* Modern Header */
 .header {
-    background: linear-gradient(45deg, #2196F3, #21CBF3);
-    color: white;
-    padding: 2rem;
-    text-align: center;
+    background: white;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-bar {
@@ -24,38 +36,125 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
 
 .logo {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 800;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     list-style: none;
 }
 
 .nav-links a {
-    color: white;
+    color: var(--dark);
     text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Sections */
+section {
+    padding: 5rem 10%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: var(--primary);
+    margin: 10px auto;
+}
+
+/* Modern Food Grid (Replacing Table) */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.food-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary);
+}
+
+.food-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.meal-slot {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.meal-slot strong {
+    color: #555;
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* Glassmorphism for Rules */
+#house-rules {
+    background: linear-gradient(135deg, #2196F3, #00bcd4);
+    color: white;
+}
+
+.rules-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.rules-list {
+    list-style: none;
+}
+
+.rules-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.rules-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #a2ffaf;
     font-weight: bold;
 }
 
-.hero {
-    background: linear-gradient(45deg, #21CBF3, #2196F3);
-    color: white;
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.hero2 {
-    background: linear-gradient(45deg, #ffffff, #ffffff);
-    color: rgb(0, 0, 0);
-    padding: 4rem 2rem;
-    text-align: center;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    section { padding: 3rem 5%; }
 }
 
 .facilities {
@@ -69,66 +168,326 @@ body {
 
 .facility-card {
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    padding: 2rem;
     text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.facility-icon-fa {
+    font-size: 3rem; /* Modern large icon size */
+    color: #2196F3; /* Uses your primary blue theme */
+    margin-bottom: 1.5rem;
+    display: block;
     transition: transform 0.3s ease;
 }
 
-.facility-card:hover {
-    transform: translateY(-5px);
-}
-
 .facility-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 1rem;
+    width: 60px; /* Small, consistent width */
+    height: 60px; /* Small, consistent height */
+    object-fit: contain; /* Keeps icon from stretching */
+    margin-bottom: 1.2rem;
+    transition: transform 0.3s ease;
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 2rem auto;
+.facility-card:hover .facility-icon-fa {
+    transform: translateY(-5px) scale(1.1);
+    color: #21CBF3; /* Slight color shift on hover */
+}
+
+/* House Rules Grid Layout */
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rules-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
     padding: 2rem;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.form-group {
+.rules-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.rules-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
-label {
-    display: block;
-    margin-bottom: 0.5rem;
+.rules-icon {
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.rules-card h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.rules-list {
+    list-style: none;
+    padding: 0;
+}
+
+.rules-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.rules-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a2ffaf; /* Mint green dot for visibility */
     font-weight: bold;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
+
+/* Contact Section Wrapper */
+.contact-section {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* Deep Professional Blue */
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-button {
+/* The Main Card */
+.contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    padding: 60px 40px;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    color: white;
+}
+
+.contact-badge {
+    background: #a2ffaf;
+    color: #1e3c72;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.contact-card h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.contact-card p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+/* The Big 72px Phone Number */
+.phone-container {
+    margin: 40px 0;
+}
+
+.hero-phone-number {
+    font-size: 72px;
+    font-weight: 900;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    line-height: 1;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hero-phone-number:hover {
+    color: #a2ffaf;
+    transform: scale(1.05);
+}
+
+/* Footer elements within the card */
+.contact-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.footer-item i {
+    color: #a2ffaf;
+}
+
+.footer-divider {
+    width: 1px;
+    height: 25px;
+    background: rgba(255,255,255,0.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero-phone-number {
+        font-size: 42px; /* Shrinks so it doesn't wrap awkwardly on small screens */
+    }
+    
+    .contact-card h2 {
+        font-size: 2.2rem;
+    }
+    
+    .contact-footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer-divider {
+        display: none;
+    }
+}
+
+/* Registration Section Base */
+.register-section {
+    padding: 80px 10%;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+}
+
+/* The Modern Card */
+.register-card {
+    background: white;
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.register-content {
+    padding: 60px;
+    text-align: left;
+}
+
+.step-badge {
+    color: #2196F3;
+    background: rgba(33, 150, 243, 0.1);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.register-content h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.register-content p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Modern Animated Button */
+.register-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
     background: linear-gradient(45deg, #2196F3, #21CBF3);
     color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    width: 100%;
+    text-decoration: none;
+    padding: 18px 35px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(33, 150, 243, 0.3);
 }
 
-footer {
-    background: #333;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    margin-top: 2rem;
+.register-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(33, 150, 243, 0.4);
 }
-</style>
+
+.form-note {
+    margin-top: 20px;
+    font-size: 0.85rem !important;
+    opacity: 0.7;
+}
+
+/* Visual Side of the Card */
+.register-visual {
+    background: linear-gradient(135deg, #2196F3 0%, #1e3c72 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.qr-placeholder {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+}
+
+.qr-placeholder i {
+    font-size: 5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 850px) {
+    .register-card {
+        grid-template-columns: 1fr;
+    }
+    .register-visual {
+        display: none; /* Hide the visual side on mobile to keep it compact */
+    }
+    .register-content {
+        padding: 40px 25px;
+        text-align: center;
+    }
+}
