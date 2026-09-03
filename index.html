@@ -18,7 +18,8 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="#facilities">Facilities</a></li>
-                <li><a href="#foodSchedule">Food Schedule</a></li>
+                <!-- <li><a href="#foodSchedule">Food Schedule</a></li> -->
+                <li><a href="#pgFood">PG Food</a></li>
                 <li><a href="#maintenance">Maintenance</a></li>
                 <li><a href="#house-rules">House Rules</a></li>
                 <li><a href="#register">Register</a></li>
@@ -85,22 +86,34 @@
 
     <!-- Facilities Section -->
  <section id="facilities" class="facilities">
+        <div class="facility-card">
+            <i class="fas fa-user-shield facility-icon-fa"></i>
+            <h3>Security First</h3>
+            <p>Ensuring your safety is our priority.</p>
+    </div>
+    
     <div class="facility-card">
-        <i class="fas fa-user-shield facility-icon-fa"></i>
-        <h3>24/7 Security Guard</h3>
-        <p>Professional security personnel ensuring your safety round the clock.</p>
+        <i class="fas fa-door-closed facility-icon-fa"></i>
+        <h3>Personal Cupboards</h3>
+        <p>Spacious cupboards for storing clothes and personal items.</p>
     </div>
 
     <div class="facility-card">
-        <i class="fas fa-door-closed facility-icon-fa"></i>
-        <h3>Spacious Cabinets</h3>
-        <p>Large wooden cabinets for storing clothes and personal items.</p>
+        <i class="fas fa-bottle-water facility-icon-fa"></i>
+        <h3>Drinking Water</h3>
+        <p>Filtered water available in the premises.</p>
+    </div>
+
+    <div class="facility-card">
+        <i class="fas fa-water facility-icon-fa"></i>
+        <h3>Hot Water</h3>
+        <p>24x7 Hot water available in the premises.</p>
     </div>
 
     <div class="facility-card">
         <i class="fas fa-utensils facility-icon-fa"></i>
-        <h3>Healthy Meals</h3>
-        <p>Nutritious meals included in package, prepared fresh daily.</p>
+        <h3>Variety of Fresh Meals</h3>
+        <p>Fresh meals with options included in package. See menu for details.</p>
     </div>
 
     <div class="facility-card">
@@ -110,9 +123,19 @@
     </div>
 
     <div class="facility-card">
-    <i class="fas fa-snowflake facility-icon-fa"></i> <h3>Shared Refrigerators</h3>
-    <p>Large capacity fridges for storing food items.</p>
-</div>
+        <i class="fas fa-elevator facility-icon-fa"></i> <h3>Lift</h3>
+        <p>Convenient lift for easy access to all floors (in select buildings)</p>
+    </div>
+
+    <div class="facility-card">
+        <i class="fas fa-bed facility-icon-fa"></i> <h3>Bed</h3>
+        <p>Comfortable bed, cot and pillow for a good night's sleep.</p>
+    </div>
+
+    <!-- <div class="facility-card">
+        <i class="fas fa-snowflake facility-icon-fa"></i> <h3>Shared Refrigerators</h3>
+        <p>Large capacity fridges for storing food items.</p>
+    </div> -->
 
     <div class="facility-card">
         <i class="fas fa-wifi facility-icon-fa"></i>
@@ -125,15 +148,21 @@
         <h3>CCTV Surveillance</h3>
         <p>Strategically placed security cameras for enhanced safety.</p>
     </div>
-
+    
     <div class="facility-card">
         <i class="fas fa-hand-holding-dollar facility-icon-fa"></i>
         <h3>Affordable</h3>
         <p>We offer the best service within your budget.</p>
     </div>
+
+    <div class="facility-card">
+        <i class="fas fa-location-arrow facility-icon-fa"></i>
+        <h3>Convenient Location</h3>
+        <p>Well-connected location with easy access to transportation and amenities.</p>
+    </div>
 </section>
 
-<section id="foodSchedule">
+<!-- <section id="foodSchedule">
     <h2>Weekly Food Schedule</h2>
     <div class="food-grid">
         <div class="food-card">
@@ -185,7 +214,67 @@
             <div class="meal-slot" style="color: #e74c3c; font-weight: bold;"><strong>Dinner</strong> Not Served</div>
         </div>
     </div>
-</section>
+</section> -->
+  <section id="pgFood" class="pg-food">
+    <h2>PG Food &ndash; Variety and Taste</h2>
+    <div class="menu-grid">
+        <div class="menu-card">
+            <div class="menu-card-header">
+                <span class="menu-icon">🍳</span>
+                <h3>Breakfast</h3>
+            </div>
+            <ul class="menu-list">
+                <li>2 Idly + 1 Vada</li>
+                <li>Kesari Bath</li>
+                <li>Khara Bath</li>
+                <li>Chow Chow Bath</li>
+                <li>Rice Bath / Bisibele Bath / Pongal</li>
+                <li>Masala Dosa / Plain Dosa</li>
+                <li>Khali Dosa <span class="menu-tag">max. 2 pieces</span></li>
+                <li>Poori <span class="menu-tag">Sunday only</span></li>
+            </ul>
+            <p class="menu-note-inline">For breakfast, only one plate of any item.</p>
+        </div>
+
+        <div class="menu-card">
+            <div class="menu-card-header">
+                <span class="menu-icon">🍚</span>
+                <h3>Lunch</h3>
+            </div>
+            <ul class="menu-list">
+                <li>PG Meals <span class="menu-desc">Rice, Sambar, Rasam, Palya, Papad</span></li>
+                <li>Curd Rice</li>
+                <li>Rice Bath </li>
+                <li>Non-Veg Meals <span class="menu-tag">Sunday only</span></li>
+            </ul>
+        </div>
+
+        <div class="menu-card">
+            <div class="menu-card-header">
+                <span class="menu-icon">🌙</span>
+                <h3>Dinner</h3>
+            </div>
+            <ul class="menu-list">
+                <li>PG Chapati &amp; Curry</li>
+                <li>PG Rice &amp; Sambar</li>
+                <li>Egg <span class="menu-tag">Wednesday only</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="menu-notes">
+        <h3>Note</h3>
+        <ul>
+            <li>Items subject to availability only.</li>
+            <li>No food served on PG holidays. You need to arrange for your own meals.</li>
+            <li>Tea / Coffee &ndash; available 2 times a day.</li>
+            <li>For breakfast, only one plate of any item. Extra rice bath available in morning.</li>
+            <li>Food served in PG house, canteen or Hotel Sampoorna.</li>
+            <li>Food menu/serving location may change based on availability and season. Any changes will be communicated.</li>
+        </ul>
+    </div>
+  </section>
+
   <section id="maintenance" class="hero2">
       <h2>Maintenance</h2>
 
@@ -223,6 +312,8 @@
                 <li>Lights out by 10:30 PM in shared rooms.</li>
                 <li>After 10:30 PM: Use the 4th floor (CMG) or terrace/corridor for work.</li>
                 <li>Inform the owner in advance if you will be away for the night.</li>
+                <li>Do not use Washing machine after 10PM</li>
+                <li>Curfew is strictly enforced; violations may lead to eviction.</li>
             </ul>
         </div>
 
@@ -248,6 +339,19 @@
                 <li>Overstaying the contract results in a fee of ₹600 per day.</li>
             </ul>
         </div>
+
+        <div class="rules-card">
+            <div class="rules-header">
+                <span class="rules-icon">🔑</span>
+                <h3>Absence Policy</h3>
+            </div>
+            <ul class="rules-list">
+                <li>If you are unable to return for a night to the PG, inform the owner in advance.</li>
+                <li>If you are away due to travel, inform the owner.</li>
+                <li>Failure to inform the owner may result in penalties and/or eviction from PG</li>
+            </ul>
+        </div>
+
     </div>
 </section>
 
